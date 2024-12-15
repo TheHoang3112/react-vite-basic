@@ -1,7 +1,12 @@
-
+import "./style.css"
 const MyComponent = () => {
     return (
-      <div>Demo Component</div>
+        <>
+            <div>Demo Component</div>
+            <div className="child" 
+                style={{fontWeight: "bold"}}
+            >Child</div>
+        </>
     );
 }
 
