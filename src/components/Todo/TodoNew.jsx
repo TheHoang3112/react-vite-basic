@@ -3,10 +3,8 @@ import { useState } from "react";
 
 const TodoNew = (props) => {
     const {addNewTodo} = props;
-
-    //addNewTodo("HoangCT");
-
     const [valueInput, setValueInput] = useState("");
+
     const handleClick = () => {
         addNewTodo(valueInput);
         setValueInput("");
