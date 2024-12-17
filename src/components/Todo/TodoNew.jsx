@@ -8,7 +8,7 @@ const TodoNew = (props) => {
 
     const [valueInput, setValueInput] = useState("Value Input");
     const handleClick = () => {
-        console.log(">>>Click add value input: ",valueInput);
+        addNewTodo(valueInput)
     }
 
     const handleOnChange = (name) => {
