@@ -5,16 +5,9 @@ import "./components/Todo/todo.css"
 import { useState } from "react";
 
 const App = () => {
-  const name = "HoangCT";
-  const age = 26;
-  const data = {
-    address: "HCM",
-    country: "VietNam"
-  }
-
   const [todoList, setTodoList] = useState([
-    { id: 1, name: "Learning React " },
-    { id: 2, name: "Watching Youtube" }
+    // { id: 1, name: "Learning React " },
+    // { id: 2, name: "Watching Youtube" }
   ]);
 
   const addNewTodo = (name) => {
@@ -35,9 +28,6 @@ const App = () => {
         addNewTodo={addNewTodo}
       />
       <TodoData 
-        name={name}
-        age={age}
-        data={data}
         todoList={todoList}
       />
       <div className="todo-image">
