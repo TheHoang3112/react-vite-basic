@@ -5,11 +5,22 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import "./styles/global.css"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/users",
+        element: <div>users page</div>
+      },
+      {
+        path: "/products",
+        element: <div>products page</div>
+      }
+    ]
   },
   {
     path: "/login",
@@ -18,14 +29,6 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <div>register page</div>
-  },
-  {
-    path: "/users",
-    element: <div>users page</div>
-  },
-  {
-    path: "/products",
-    element: <div>products page</div>
   }
 ]);
 
