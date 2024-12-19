@@ -6,12 +6,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./styles/global.css"
+import TodoApp from './components/Todo/TodoApp.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        index: true,
+        element: <TodoApp />
+      },
       {
         path: "/users",
         element: <div>users page</div>
