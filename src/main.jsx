@@ -7,11 +7,13 @@ import {
 } from "react-router-dom";
 import "./styles/global.css"
 import TodoApp from './components/Todo/TodoApp.jsx';
+import ErrorPage from './pages/error.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         index: true,
@@ -22,8 +24,8 @@ const router = createBrowserRouter([
         element: <div>users page</div>
       },
       {
-        path: "/products",
-        element: <div>products page</div>
+        path: "/books",
+        element: <div>BookPage</div>
       }
     ]
   },
