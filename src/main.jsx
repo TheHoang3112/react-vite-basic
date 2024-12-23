@@ -8,6 +8,7 @@ import {
 import "./styles/global.css"
 import TodoApp from './components/Todo/TodoApp.jsx';
 import ErrorPage from './pages/error.jsx';
+import UserPage from './pages/user.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/users",
-        element: <div>users page</div>
+        element: <UserPage />
       },
       {
         path: "/books",
