@@ -1,6 +1,5 @@
 import { Button, Input, notification } from "antd";
 import { useState } from "react";
-import axios from "axios";
 import { createUserAPI } from "../../services/api.service";
 
 const UserForm = () => {
@@ -13,8 +12,13 @@ const UserForm = () => {
         const res = await createUserAPI(fullName, email, password, phone);
         if (res.data) {
           notification.success({
-            message: "create user",
+            message: "Create user",
             description: "Tạo user thành công"
+          })
+        } else {
+          notification.error({
+            message: "Error create user",
+            description: JSON.stringify(res.message)
           })
         }
     }
