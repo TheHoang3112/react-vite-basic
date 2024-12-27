@@ -5,6 +5,7 @@ import { fetchAllUserAPI } from "../services/api.service";
 
 const UserPage = () => {
   const [dataUsers, setDataUsers] = useState([]);
+
   useEffect(() => {
     loadUser();
   }, []);
